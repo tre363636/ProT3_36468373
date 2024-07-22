@@ -18,7 +18,7 @@
                     <div class="form-register p-4">
                         <form>
                             <div class="text-center mb-4">
-                                <img src="assets/img/tu_logo.gif" alt="User Icon" class="user-icon">
+                                <img src="public/assets/img/tu_logo.gif" alt="User Icon" class="user-icon">
                             </div>
                             <div class="mb-3">
                                 <label for="nombre" class="form-label text-white">Nombre</label>
@@ -46,7 +46,7 @@
                             </div>
                             <div class="d-flex justify-content-between">
                                 <button type="submit" class="btn btn-primary me-2">Registrar</button>
-                                <button type="button" class="btn btn-secondary" onclick="window.location.href='principal.html'">¿Cancelar? no seas así</button>
+                                <button type="button" class="btn btn-secondary" onclick="window.location.href=<?php echo base_url ('principal')?>">¿Cancelar? no seas así</button>
                             </div>
                         </form>
                     </div>

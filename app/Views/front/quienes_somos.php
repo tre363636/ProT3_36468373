@@ -7,21 +7,21 @@
                 <h2>Nuestro Equipo</h2>
                 <div class="card-container">
                     <div class="card">
-                        <img src="assets/img/ana_perez.jpg" class="card-img-top" alt="Ana Pérez">
+                        <img src="public/assets/img/ana_perez.jpg" class="card-img-top" alt="Ana Pérez">
                         <div class="card-body">
                             <h5 class="card-title">Ana Pérez - Fundadora y CEO</h5>
                             <p class="card-text">Ana es la mente creativa detrás de Mapaches Antifaces, con una pasión innata por los animales y una visión innovadora que ha llevado a la empresa al éxito.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="assets/img/luis_gomez.jpg" class="card-img-top" alt="Luis Gómez">
+                        <img src="public/assets/img/luis_gomez.jpg" class="card-img-top" alt="Luis Gómez">
                         <div class="card-body">
                             <h5 class="card-title">Luis Gómez - Jefe de Operaciones</h5>
                             <p class="card-text">Luis se asegura de que cada mapache esté bien cuidado y listo para encontrar su nuevo hogar. Su dedicación y amor por los animales garantizan la mejor calidad en nuestros productos.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="assets/img/maria_lopez.jpg" class="card-img-top" alt="María López">
+                        <img src="public/assets/img/maria_lopez.jpg" class="card-img-top" alt="María López">
                         <div class="card-body">
                             <h5 class="card-title">María López - Directora de Marketing</h5>
                             <p class="card-text">María es la encargada de compartir la magia de nuestros mapaches con el mundo. Su experiencia en marketing ha sido fundamental para nuestro crecimiento y presencia en el mercado.</p>

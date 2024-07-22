@@ -8,7 +8,7 @@ class Home extends BaseController
     {
         echo view('front/head_view');
         echo view('front/navbar_view');
-        echo view('front/principal_ultimo');
+        echo view('front/principal');
         echo view('front/footer_view');
     }
     public function quienes_somos()

@@ -91,4 +91,6 @@ class Autoload extends AutoloadConfig
      * @var list<string>
      */
     public $helpers = [];
+    
 }
+

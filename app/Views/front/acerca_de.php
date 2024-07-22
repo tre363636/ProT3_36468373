@@ -5,7 +5,7 @@
                 <div class="col-12 col-md-4 mb-4 d-flex flex-column align-items-center">
                     <h2 class="custom-section-title text-center">Sobre Nosotros</h2>
                     <div class="card">
-                        <img src="assets/img/trabajo.jpg" class="card-img-top" alt="Trabajo">
+                        <img src="public/assets/img/trabajo.jpg" class="card-img-top" alt="Trabajo">
                         <div class="card-body">
                             <p class="card-text">En Mapaches Antifaces, nos especializamos en la venta de mapaches con distintos antifaces, cada uno diseñado para reflejar una personalidad y estilo únicos. Nuestros mapaches no solo son adorables, sino que también están entrenados para ser los compañeros perfectos.</p>
                         </div>
@@ -14,7 +14,7 @@
                 <div class="col-12 col-md-4 mb-4 d-flex flex-column align-items-center">
                     <h2 class="custom-section-title text-center">Lo Que Ofrecemos</h2>
                     <div class="card">
-                        <img src="assets/img/nosotros.jpg" class="card-img-top" alt="Nosotros">
+                        <img src="public/assets/img/nosotros.jpg" class="card-img-top" alt="Nosotros">
                         <div class="card-body">
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Variedad de Estilos: Desde el clásico "El Zorro" hasta el intrigante "Ladrón de poca monta", tenemos un mapache para cada gusto.</li>
@@ -27,7 +27,7 @@
                 <div class="col-12 col-md-4 mb-4 d-flex flex-column align-items-center">
                     <h2 class="custom-section-title text-center">Ubicación y Contacto</h2>
                     <div class="card">
-                        <img src="assets/img/mate.jpg" class="card-img-top" alt="Mate">
+                        <img src="public/assets/img/mate.jpg" class="card-img-top" alt="Mate">
                         <div class="card-body">
                             <p>Nos encontramos en la hermosa ciudad de Corrientes, Argentina. Ven a visitarnos o contáctanos para más información.</p>
                             <p><strong>Dirección:</strong> Calle de los Mapaches 123, Corrientes, Argentina</p>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - Talentos Digitales</title>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/miestilo.css">
+    <link href="<?php echo base_url('public/assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url('public/assets/css/miestilo.css'); ?>">
 </head>
 <body>
     <!-- Header -->
@@ -14,7 +14,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex align-items-center">
                     <a href="https://www.youtube.com/watch?v=RXKabdUBiWM" target="_blank">
-                        <img src="assets/img/programmer.gif" alt="Logo Talentos Digitales" class="logo">
+                        <img src="<?php echo base_url('public/assets/img/programmer.gif'); ?>" alt="Logo Talentos Digitales" class="logo">
                     </a>
                     <div class="title-container">
                         <h1>Mapacholandia S.A.</h1>
@@ -29,10 +29,17 @@
                         Usuario
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                        <li><a class="dropdown-item" href="registro.html">Registro</a></li>
-                        <li><a class="dropdown-item" href="login.html">Login</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url('registro'); ?>">Registro</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url('login'); ?>">Login</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
+    <!-- Aquí iría el resto de tu contenido -->
+
+    <!-- JavaScript -->
+    <script src="<?php echo base_url('public/assets/js/bootstrap.bundle.min.js'); ?>"></script>
+    <script src="<?php echo base_url('public/assets/js/all.js'); ?>"></script>
+</body>
+</html>

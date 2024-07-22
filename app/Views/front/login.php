@@ -3,7 +3,7 @@
         <div class="form-register p-4">
             <form>
                 <div class="text-center mb-4">
-                    <img src="assets/img/deuna.jpg" alt="User Icon" class="user-icon">
+                    <img src="public/assets/img/deuna.jpg" alt="User Icon" class="user-icon">
                 </div>
                 <div class="mb-3">
                     <label for="correo" class="form-label text-white">Correo</label>
@@ -15,10 +15,10 @@
                 </div>
                 <div class="d-flex justify-content-between">
                     <button type="submit" class="btn btn-primary w-50 me-2">Ingresar</button>
-                    <a href="principal.html" class="btn btn-secondary w-50">Cancelar</a>
+                    <a href="<?php echo base_url ('principal')?>" class="btn btn-secondary w-50">Cancelar</a>
                 </div>
                 <div class="mt-3 text-center">
-                    <span>¿Aún no se registró? <a href="registro.html">Registrarse aquí</a></span>
+                    <span>¿Aún no se registró? <a href="<?php echo base_url ('registro')?>">Registrarse aquí</a></span>
                 </div>
             </form>
         </div>
