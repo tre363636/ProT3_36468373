@@ -368,3 +368,8 @@ footer {
     display: flex !important;
     justify-content: flex-start;
 }
+/* assets/css/miestilo.css */
+.nav-link.active {
+    background-color: #6b4545; /* Cambia esto por el color de fondo que prefieras */
+    color: #000; /* Cambia esto por el color de texto que prefieras */
+}

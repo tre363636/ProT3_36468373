@@ -16,7 +16,6 @@
             <p class="footer-copyright">Derechos de mapacheautor © 2024 | Mapache y asociados</p>
         </div>
     </footer>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/fontawesome/js/all.js"></script>
+    <!-- JavaScript -->
 </body>
 </html>

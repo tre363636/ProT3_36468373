@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro - Talentos Digitales</title>
+    <title><?php echo ($titulo);?></title>
     <link href="<?php echo base_url('public/assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url('public/assets/css/miestilo.css'); ?>">
 </head>
