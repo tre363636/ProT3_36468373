@@ -18,6 +18,7 @@
                 <div class="form-register p-4">
                 <?php $validation = \Config\Services::validation(); ?>
 
+                
 <form method="post" action="<?php echo base_url('/enviar_form'); ?>"> 
 <?= csrf_field(); ?>
 <?php if (!empty(session()->getFlashdata('fail'))): ?>
