@@ -23,8 +23,8 @@ class login_controller extends BaseController
         $model = new usuario_Model();
 
         // traemos los datos del formulario
-        $email = $this->request->getVar('email');
-        $password = $this->request->getVar('pass');
+        $email = $this->request->getVar('correo');
+        $password = $this->request->getVar('password');
 
         $data = $model->where('email', $email)->first();
         if ($data) {

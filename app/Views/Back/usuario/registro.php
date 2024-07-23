@@ -16,50 +16,49 @@
             </div>
             <div class="col-md-6">
                 <div class="form-register p-4">
-                <?php $validation = \Config\Services::validation(); ?>
+                    <?php $validation = \Config\Services::validation(); ?>
 
-                
-<form method="post" action="<?php echo base_url('/enviar_form'); ?>"> 
-<?= csrf_field(); ?>
-<?php if (!empty(session()->getFlashdata('fail'))): ?>
-    <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
-<?php endif ?>
-<?php if (!empty(session()->getFlashdata('success'))): ?>
-    <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
-<?php endif ?>
+                    <form method="post" action="<?= base_url('/enviar-form'); ?>"> 
+                        <?= csrf_field();?>
+                        <?php if (!empty(session()->getFlashdata('fail'))): ?>
+                            <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
+                        <?php endif ?>
+                        <?php if (!empty(session()->getFlashdata('success'))): ?>
+                            <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
+                        <?php endif ?>
                         <div class="text-center mb-4">
-                            <img src="public/assets/img/tu_logo.gif" alt="User Icon" class="user-icon">
+                            <img src="<?= base_url('public/assets/img/tu_logo.gif'); ?>" alt="User Icon" class="user-icon">
                         </div>
                         <div class="mb-3">
-                            <label for="nombre" class="form-label text-white">Nombre</label>
+                            <label for="nombre" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" value="<?= old('nombre') ?>">
                             <?php if ($validation->getError('nombre')): ?>
                                 <div class="alert alert-danger"><?= $validation->getError('nombre'); ?></div>
                             <?php endif; ?>
                         </div>
                         <div class="mb-3">
-                            <label for="apellido" class="form-label text-white">Apellido</label>
+                            <label for="apellido" class="form-label">Apellido</label>
                             <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" value="<?= old('apellido') ?>">
                             <?php if ($validation->getError('apellido')): ?>
                                 <div class="alert alert-danger"><?= $validation->getError('apellido'); ?></div>
                             <?php endif; ?>
                         </div>
                         <div class="mb-3">
-                            <label for="usuario" class="form-label text-white">Usuario</label>
+                            <label for="usuario" class="form-label">Usuario</label>
                             <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" value="<?= old('usuario') ?>">
                             <?php if ($validation->getError('usuario')): ?>
                                 <div class="alert alert-danger"><?= $validation->getError('usuario'); ?></div>
                             <?php endif; ?>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label text-white">Email</label>
+                            <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" name="email" placeholder="correo@algo.com" value="<?= old('email') ?>">
                             <?php if ($validation->getError('email')): ?>
                                 <div class="alert alert-danger"><?= $validation->getError('email'); ?></div>
                             <?php endif; ?>
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label text-white">Password</label>
+                            <label for="pass" class="form-label">Password</label>
                             <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña (mínimo 5 caracteres)">
                             <?php if ($validation->getError('pass')): ?>
                                 <div class="alert alert-danger"><?= $validation->getError('pass'); ?></div>
@@ -71,7 +70,7 @@
                         </div>
                         <div class="d-flex justify-content-between">
                             <button type="submit" class="btn btn-primary me-2">Registrar</button>
-                            <button type="button" class="btn btn-secondary" onclick="window.location.href='<?php echo base_url('principal')?>'">¿Cancelar? no seas así</button>
+                            <button type="button" class="btn btn-secondary" onclick="window.location.href='<?= base_url('principal') ?>'">¿Cancelar? no seas así</button>
                         </div>
                     </form>
                 </div>

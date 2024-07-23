@@ -10,7 +10,8 @@ class usuario_controller extends BaseController
     public function create()
     {
         helper(['form', 'url']);
-        echo view('front/head_view');
+        $data['titulo']='registro';
+        echo view('front/head_view',$data);
         echo view('front/navbar_view');
         echo view('Back/usuario/registro');
         echo view('front/footer_view');
@@ -28,7 +29,8 @@ class usuario_controller extends BaseController
         ]);
 
         if (!$input) {
-            echo view('front/head_view');
+            $data['titulo']='registro';
+            echo view('front/head_view',$data);
             echo view('front/navbar_view');
             echo view('Back/usuario/registro', [
                 'validation' => $this->validator
@@ -44,6 +46,7 @@ class usuario_controller extends BaseController
                 'pass' => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT)
             ];
             $model->save($data);
+            session()->setFlashdata('msg', 'Te has Mapachegistrado con exito YEAH!');
             return redirect()->to('/login');
         }
     }
