@@ -31,6 +31,10 @@ $routes->get('usuario/delete/(:num)', 'usuario_controller::delete/$1');
 $routes->get('usuario/edit/(:num)', 'usuario_controller::edit/$1');
 $routes->post('usuario/update/(:num)', 'usuario_controller::update/$1');
 
+/*nuevo usuario */
+$routes->get('/usuario/new', 'usuario_controller::newUser');
+$routes->post('/usuario_controller/saveNewUser', 'usuario_controller::saveNewUser');
+
 
 if (is_file(APPPATH . 'config/' . ENVIRONMENT . 'Routes.php')) {
     require APPPATH . 'config/' . ENVIRONMENT . 'Routes.php';

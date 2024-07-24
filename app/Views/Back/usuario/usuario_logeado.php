@@ -43,6 +43,10 @@
                 </tbody>
             </table>
         </div>
+        <!-- Botón para agregar nuevo usuario dentro de las acciones -->
+        <div class="mt-3">
+            <a href="<?= base_url('usuario/new'); ?>" class="btn btn-primary">Agregar Nuevo Usuario</a>
+        </div>
 
         </div>
 
