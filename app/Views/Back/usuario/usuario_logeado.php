@@ -16,10 +16,10 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Email</th>
-                        <th>Acciones</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,8 +30,8 @@
                                 <td><?= esc($usuario['apellido']); ?></td>
                                 <td><?= esc($usuario['email']); ?></td>
                                 <td>
-                                    <a href="<?= base_url('usuario/edit/'.$usuario['id']); ?>" class="btn btn-warning btn-sm">Editar</a>
-                                    <a href="<?= base_url('usuario/delete/'.$usuario['id']); ?>" class="btn btn-danger btn-sm">Borrar</a>
+                                    <a href="<?= base_url('usuario/edit/'.$usuario['id_usuario']); ?>" class="btn btn-warning btn-sm">Editar</a>
+                                    <a href="<?= base_url('usuario/delete/'.$usuario['id_usuario']); ?>" class="btn btn-danger btn-sm">Borrar</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

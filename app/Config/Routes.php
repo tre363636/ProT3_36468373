@@ -26,6 +26,12 @@ $routes->post('/enviarlogin', 'login_controller::auth');
 $routes->get('/panel', 'panel_controller::index', ['filter' => 'auth']);
 $routes->get('/logout', 'login_controller::logout');
 
+/* Rutas de edit y eliminar */
+$routes->get('usuario/delete/(:num)', 'usuario_controller::delete/$1');
+$routes->get('usuario/edit/(:num)', 'usuario_controller::edit/$1');
+$routes->post('usuario/update/(:num)', 'usuario_controller::update/$1');
+
+
 if (is_file(APPPATH . 'config/' . ENVIRONMENT . 'Routes.php')) {
     require APPPATH . 'config/' . ENVIRONMENT . 'Routes.php';
 }
