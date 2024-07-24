@@ -26,13 +26,25 @@ class login_controller extends BaseController
         $email = $this->request->getVar('correo');
         $password = $this->request->getVar('password');
 
+        // Verificamos si los campos están vacíos
+        if (empty($email) && empty($password)) {
+            $session->setFlashdata('msg', 'No has ingresado el email y la password.');
+            return redirect()->to('/login');
+        } elseif (empty($email)) {
+            $session->setFlashdata('msg', 'No has ingresado el email.');
+            return redirect()->to('/login');
+        } elseif (empty($password)) {
+            $session->setFlashdata('msg', 'No has ingresado la password.');
+            return redirect()->to('/login');
+        }
+
         $data = $model->where('email', $email)->first();
         if ($data) {
             $pass = $data['pass'];
             $ba = $data['baja'];
             if ($ba == 'SI') {
-                $session->setFlashdata('msg', 'usuario dado de baja');
-                return redirect()->to('/login_controller');
+                $session->setFlashdata('msg', 'Este Mapacheusuario esta dado de baja :(');
+                return redirect()->to('/login');
             }
 
             // Se verifican los datos ingresados para iniciar, si cumplen la verificación inicia la sesión
