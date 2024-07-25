@@ -5,12 +5,12 @@
             <div class="col-md-6">
                 <div class="welcome-text-box p-4">
                     <h2>¡Bienvenido a Registro Mapachesco! 🦝</h2>
-                    <p>Nos alegra que hayas decidido unirte a nuestra comunidad de amantes de los mapaches. Aquí, no solo encontrarás una mascota única y fascinante, sino también un nuevo mejor amigo que llenará tu hogar de alegría y aventuras.</p>
+                    <p>Nos alegra que hayas decidido unirte a nuestra comunidad de amantes de los mapaches...</p>
                     <h3>Ventajas de tener un mapache como mascota:</h3>
                     <ul>
-                        <li><strong>Inteligencia y Cariño:</strong> Los mapaches son animales extremadamente inteligentes y cariñosos. Disfrutan de la compañía humana y pueden aprender trucos y comportamientos con facilidad.</li>
-                        <li><strong>Diversión y Entretenimiento:</strong> Con su naturaleza curiosa y juguetona, los mapaches siempre encuentran formas de entretenerse y entretenerte. Cada día con un mapache es una nueva aventura.</li>
-                        <li><strong>Unicidad:</strong> Tener un mapache como mascota es una experiencia exclusiva. Destácate entre tus amigos y familiares con una mascota que es tan única como tú.</li>
+                        <li><strong>Inteligencia y Cariño:</strong>...</li>
+                        <li><strong>Diversión y Entretenimiento:</strong>...</li>
+                        <li><strong>Unicidad:</strong>...</li>
                     </ul>
                 </div>
             </div>
@@ -18,7 +18,7 @@
                 <div class="form-register p-4">
                     <?php $validation = \Config\Services::validation(); ?>
 
-                    <form method="post" action="<?= base_url('/enviar-form'); ?>"> 
+                    <form id="registerForm" method="post" action="<?= base_url('/enviar-form'); ?>"> 
                         <?= csrf_field();?>
                         <?php if (!empty(session()->getFlashdata('fail'))): ?>
                             <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
@@ -66,8 +66,9 @@
                         </div>
                         <div class="form-check mb-3">
                             <input type="checkbox" class="form-check-input" id="termsCheck">
-                            <label class="form-check-label" for="termsCheck">Estoy de acuerdo con los <a href="#">Términos</a></label>
+                            <label class="form-check-label" for="termsCheck">Estoy de acuerdo con los <a href="<?= base_url('terminos'); ?>" target="_blank">Términos</a></label>
                         </div>
+                        <div id="termsError" class="alert alert-danger d-none">Debe aceptar los términos para poder registrarse.</div>
                         <div class="d-flex justify-content-between">
                             <button type="submit" class="btn btn-primary me-2">Registrar</button>
                             <button type="button" class="btn btn-secondary" onclick="window.location.href='<?= base_url('principal') ?>'">¿Cancelar? no seas así</button>
@@ -78,3 +79,15 @@
         </div>
     </div>
 </section>
+
+<!-- JavaScript para validar el formulario -->
+<script>
+document.getElementById('registerForm').addEventListener('submit', function(event) {
+    var termsCheck = document.getElementById('termsCheck');
+    var termsError = document.getElementById('termsError');
+    if (!termsCheck.checked) {
+        event.preventDefault(); // Evita que el formulario se envíe
+        termsError.classList.remove('d-none'); // Muestra el mensaje de error
+    }
+});
+</script>

@@ -140,4 +140,8 @@ class Usuario_Controller extends BaseController
             return redirect()->to('/panel');
         }
     }
+    public function terminos()
+    {
+        echo view('front/terminos');
+    }
 }
