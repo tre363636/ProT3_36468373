@@ -69,7 +69,6 @@ class Usuario_Controller extends BaseController
 
         $data['perfil_id'] = $perfil;
         echo view('front/head_view_logueado', $dato);
-        echo view('front/navbar_view');
         echo view('back/usuario/edit_view', $data);
         echo view('front/footer_view');
     }
@@ -104,7 +103,6 @@ class Usuario_Controller extends BaseController
         helper(['form', 'url']);
         $data['titulo'] = 'Agregar Nuevo Usuario';
         echo view('front/head_view_logueado', $data);
-        echo view('front/navbar_view');
         echo view('Back/usuario/new_user');
         echo view('front/footer_view');
     }
